@@ -31,6 +31,12 @@ def predicter(g, p, q, r, s, actual_pefr):
         print(traceback.format_exc())
         return {'error': str(e)}
 
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello, World!"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
